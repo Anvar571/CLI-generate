@@ -7,4 +7,4 @@ sudo ln -s $(pwd)/src/main.js /usr/local/bin/$prname;
 
 chmod +x $(pwd)/src/main.js;
 
-echo "Run project GENERATOR keyword! Congratulations success installed!!!"
+echo "GENERATOR is successfully installed!!!"

@@ -1,20 +1,15 @@
 #!/usr/bin/env node
 
-import Table from 'cli-table';
-import chalk from 'chalk';
-import { DEFAULT_COMMAND } from './utils/defaultkey.js';
+import path from "path"
+import table from "./app.js";
+import Helper from "./helper.js";
 
-// Create a new table
-const table = new Table({
-  head: [chalk.yellow('Commands'), chalk.yellow('Description')],
+const generator = path.basename(process.argv.slice(1)[0]);
 
-});
+const args = process.argv.slice(2);
 
-// Add some data
-table.push([chalk.green('generator'), DEFAULT_COMMAND.help]);
-table.push([chalk.green('version'), DEFAULT_COMMAND.version]);
-table.push([chalk.green('generator-ts'), DEFAULT_COMMAND.ts]);
-table.push([chalk.green('generator-js'), DEFAULT_COMMAND.js]);
-
-// Print the table to the console
-console.log(table.toString());
+if (generator && args.length == 0){
+  console.log(table.toString());
+}else {
+  new Helper(args);
+}
