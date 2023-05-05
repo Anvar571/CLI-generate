@@ -3,10 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   chalk: ^5.2.0
   cli-table: ^0.3.11
+  prettier: 2.8.8
 
 dependencies:
   chalk: 5.2.0
   cli-table: 0.3.11
+
+devDependencies:
+  prettier: 2.8.8
 
 packages:
 
@@ -26,3 +30,9 @@ packages:
     resolution: {integrity: sha512-pFGrxThWcWQ2MsAz6RtgeWe4NK2kUE1WfsrvvlctdII745EW9I0yflqhe7++M5LEc7bV2c/9/5zc8sFcpL0Drw==}
     engines: {node: '>=0.1.90'}
     dev: false
+
+  /prettier/2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true

@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"node src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/main.js",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,md}\"",
+    "test": "node --test test/"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "cli-table": "^0.3.11"
+  },
+  "devDependencies": {
+    "prettier": "2.8.8"
   }
 }
